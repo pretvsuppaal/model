@@ -439,7 +439,9 @@ rand_ptr=0</label></transition><transition><source ref="id44"/><target ref="id44
 
 // List one or more processes to be composed into a system.
 
+// Uncomment next line to toggle off Pfitzmann's attack, keep commented otherwise
 //Mteller0 = Mteller(0);
+// Uncomment next line to toggle on Pfitzmann's attack, keep commented otherwise
 Mteller0 = Corr_Mteller(0);
 Mteller1 = Mteller(1);
 Mteller2 = Mteller(2);
