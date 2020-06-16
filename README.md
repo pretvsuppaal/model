@@ -1,10 +1,15 @@
 # About
 UPPAAL Model for voting protocol Pr&ecirc;t &agrave; Voter together with some natural extentions.
 
+* `pretvsuppaal.xml` file contains the basic version of Pr&ecirc;t &agrave; Voter model.
+To toggle off simulation of Pfitzmann's Attack, replace declaration of the (honest) first mix teller with declaration of corrupted one.
+(e.g.: comment declaration of honest and uncomment declaration of corrupted).
+* `simple_knowled.xml` file contains an extented version, which allows verification of some knowledge-related properties
+
 ## Uppaal overview
 Uppaal window is divided into three main parts (tabs):
 1. **Editor** contains definition for the system and its components. Left-side tree allows to switch between different parts of the system.
-The list of system processes has to be explicitly declared in `System declarations`.
+The list of system processes has to be explicitly declared in *System declarations*.
 
 2. **Simulator** can be used to run the system manually, choosing which transition to take, or to run in random mode (auto).
 
