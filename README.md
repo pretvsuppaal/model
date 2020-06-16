@@ -6,7 +6,7 @@ UPPAAL Model for voting protocol Pr&ecirc;t &agrave; Voter together with some na
 * `pretvsuppaal.xml` file contains the basic version of Pr&ecirc;t &agrave; Voter model.
 To toggle off simulation of Pfitzmann's Attack, replace declaration of the (honest) first mix teller with declaration of corrupted one.
 (e.g.: comment declaration of honest and uncomment declaration of corrupted).
-* `simple_knowled.xml` file contains an extented version, which allows verification of some knowledge-related properties
+* `simple_knowledge.xml` file contains an extented version, which allows verification of some knowledge-related properties
 
 ## Uppaal overview
 Uppaal window is divided into three main parts (tabs):
