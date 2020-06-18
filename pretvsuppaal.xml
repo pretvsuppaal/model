@@ -267,7 +267,7 @@ void my_decr(){
     board[ptr][i].y1 = board[ptr-1][i].y1;
     board[ptr][i].y2 = decr( board[ptr-1][i], my_k );
   }
-}</declaration><location id="id19" x="-1264" y="-168"><name x="-1280" y="-152">idle</name></location><location id="id20" x="-1112" y="-40"><name x="-1136" y="-24">refused</name></location><location id="id21" x="-576" y="-168"><name x="-584" y="-152">halt</name></location><location id="id22" x="-840" y="-168"><name x="-888" y="-152">cooperating</name></location><location id="id23" x="-1112" y="-168"><name x="-1144" y="-152">wait</name></location><init ref="id19"/><transition><source ref="id19"/><target ref="id23"/><label kind="synchronisation" x="-1224" y="-168">d_phase?</label></transition><transition><source ref="id23"/><target ref="id20"/><label kind="guard" x="-1216" y="-104">dt_curr&lt;dt_min</label></transition><transition><source ref="id23"/><target ref="id22"/><label kind="guard" x="-1072" y="-192">dt_curr&lt;dt_min</label><label kind="assignment" x="-1072" y="-168">dt_participates[dt_id]=true,
+}</declaration><location id="id19" x="-1264" y="-168"><name x="-1280" y="-152">idle</name></location><location id="id20" x="-1112" y="-40"><name x="-1136" y="-24">refused</name></location><location id="id21" x="-576" y="-168"><name x="-584" y="-152">halt</name></location><location id="id22" x="-840" y="-168"><name x="-888" y="-152">cooperating</name></location><location id="id23" x="-1112" y="-168"><name x="-1144" y="-152">wait</name></location><init ref="id19"/><transition><source ref="id19"/><target ref="id23"/><label kind="synchronisation" x="-1224" y="-168">d_phase?</label></transition><transition><source ref="id23"/><target ref="id20"/><label kind="guard" x="-1216" y="-104">dt_curr&gt;=dt_min</label></transition><transition><source ref="id23"/><target ref="id22"/><label kind="guard" x="-1072" y="-192">dt_curr&lt;dt_min</label><label kind="assignment" x="-1072" y="-168">dt_participates[dt_id]=true,
 dt_curr++</label></transition><transition><source ref="id22"/><target ref="id21"/><label kind="guard" x="-744" y="-192">dt_curr==dt_min</label><label kind="assignment" x="-744" y="-168">my_decr(),
 decryptions++</label></transition></template><template><name>Sys</name><declaration>z_t r_vec[v_total];
 meta int[0,v_total] r_ptr=0;
@@ -439,9 +439,7 @@ rand_ptr=0</label></transition><transition><source ref="id44"/><target ref="id44
 
 // List one or more processes to be composed into a system.
 
-// Uncomment next line to toggle off Pfitzmann's attack, keep commented otherwise
 //Mteller0 = Mteller(0);
-// Uncomment next line to toggle on Pfitzmann's attack, keep commented otherwise
 Mteller0 = Corr_Mteller(0);
 Mteller1 = Mteller(1);
 Mteller2 = Mteller(2);
